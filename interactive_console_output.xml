@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230207 20:36:51.290" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\davfre\.vscode\extensions\robocorp.robotframework-lsp-1.9.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Open Pdf">
+<arg>output\1.pdf</arg>
+<msg timestamp="20230207 20:37:08.791" level="FAIL">No keyword with name 'Open Pdf' found.</msg>
+<status status="FAIL" starttime="20230207 20:37:08.791" endtime="20230207 20:37:08.791"/>
+</kw>
+<kw name="Open Pdf" library="RPA.PDF">
+<arg>output\1.pdf</arg>
+<doc>Open a PDF document for reading.</doc>
+<msg timestamp="20230207 20:37:28.251" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'output1.pdf'</msg>
+<status status="FAIL" starttime="20230207 20:37:28.248" endtime="20230207 20:37:28.254"/>
+</kw>
+<kw name="Open Pdf" library="RPA.PDF">
+<arg>output\\1.pdf</arg>
+<doc>Open a PDF document for reading.</doc>
+<status status="PASS" starttime="20230207 20:37:34.100" endtime="20230207 20:37:34.100"/>
+</kw>
+<kw name="output\\1">
+<var>${order_item_path}</var>
+<msg timestamp="20230207 20:38:18.934" level="FAIL">No keyword with name 'output\\1' found.</msg>
+<status status="FAIL" starttime="20230207 20:38:18.934" endtime="20230207 20:38:18.935"/>
+</kw>
+<kw name="'output\\1'">
+<var>${order_item_path}</var>
+<msg timestamp="20230207 20:38:27.419" level="FAIL">No keyword with name ''output\\1'' found.</msg>
+<status status="FAIL" starttime="20230207 20:38:27.418" endtime="20230207 20:38:27.419"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${order_item_path}</var>
+<arg>output\\1</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230207 20:38:40.560" level="INFO">${order_item_path} = output\1</msg>
+<status status="PASS" starttime="20230207 20:38:40.559" endtime="20230207 20:38:40.560"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>['${order_item_path}.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:02:01.860" level="FAIL">OSError: [Errno 22] Invalid argument: 'output\x01.png'</msg>
+<status status="FAIL" starttime="20230207 21:02:01.844" endtime="20230207 21:02:01.862"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${order_item_path}'.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:02:27.957" level="FAIL">ValueError: Argument 'files' got value '[output\1'.png']' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:02:27.950" endtime="20230207 21:02:27.959"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${order_item_path}.png]</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:02:37.247" level="FAIL">ValueError: Argument 'files' got value '[output\1.png]' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:02:37.244" endtime="20230207 21:02:37.248"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>${order_item_path}.png</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:02:44.350" level="FAIL">ValueError: Argument 'files' got value 'output\1.png' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:02:44.348" endtime="20230207 21:02:44.351"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>'[${order_item_path}.png]'</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:02:52.783" level="FAIL">ValueError: Argument 'files' got value ''[output\1.png]'' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:02:52.781" endtime="20230207 21:02:52.784"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>['1.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:03:09.331" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: '1.png'</msg>
+<status status="FAIL" starttime="20230207 21:03:09.325" endtime="20230207 21:03:09.332"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>['output\1.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:03:21.016" level="FAIL">FileNotFoundError: [Errno 2] No such file or directory: 'output1.png'</msg>
+<status status="FAIL" starttime="20230207 21:03:21.011" endtime="20230207 21:03:21.017"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>['output\\1.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:03:27.850" level="FAIL">OSError: [Errno 22] Invalid argument: 'output\x01.png'</msg>
+<status status="FAIL" starttime="20230207 21:03:27.844" endtime="20230207 21:03:27.852"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>['output\\\1.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:03:40.529" level="FAIL">OSError: [Errno 22] Invalid argument: 'output\x01.png'</msg>
+<status status="FAIL" starttime="20230207 21:03:40.523" endtime="20230207 21:03:40.530"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>['output\\\\1.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<status status="PASS" starttime="20230207 21:03:45.690" endtime="20230207 21:03:45.891"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${order_item_path}${/}'.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:05:09.726" level="FAIL">ValueError: Argument 'files' got value '[output\1\'.png']' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:05:09.726" endtime="20230207 21:05:09.726"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${order_item_path}${/}.png]</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:05:23.015" level="FAIL">ValueError: Argument 'files' got value '[output\1\.png]' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:05:23.013" endtime="20230207 21:05:23.016"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${order_item_path}.png]</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:07:08.913" level="FAIL">ValueError: Argument 'files' got value '[output\1.png]' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:07:08.907" endtime="20230207 21:07:08.914"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${order_item_path}.png,]</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:07:13.644" level="FAIL">ValueError: Argument 'files' got value '[output\1.png,]' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:07:13.644" endtime="20230207 21:07:13.644"/>
+</kw>
+<kw name="${order_item_path}.png">
+<var>@{listtest}</var>
+<msg timestamp="20230207 21:10:01.154" level="FAIL">No keyword with name '${order_item_path}.png' found.</msg>
+<status status="FAIL" starttime="20230207 21:10:01.154" endtime="20230207 21:10:01.155"/>
+</kw>
+<kw name="@{listtest}=${order_item_path}.png">
+<msg timestamp="20230207 21:10:09.245" level="FAIL">No keyword with name '@{listtest}=${order_item_path}.png' found.</msg>
+<status status="FAIL" starttime="20230207 21:10:09.245" endtime="20230207 21:10:09.245"/>
+</kw>
+<kw name="[${order_item_path}.png]">
+<var>@{listtest}</var>
+<msg timestamp="20230207 21:10:17.482" level="FAIL">No keyword with name '[${order_item_path}.png]' found.</msg>
+<status status="FAIL" starttime="20230207 21:10:17.481" endtime="20230207 21:10:17.482"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>@{testlist}</var>
+<arg>${order_item_path}.png</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230207 21:10:59.886" level="INFO">@{testlist} = [ output\1.png ]</msg>
+<status status="PASS" starttime="20230207 21:10:59.885" endtime="20230207 21:10:59.886"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>@{testlist}</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:11:25.118" level="FAIL">ValueError: Argument 'files' got value 'output\1.png' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:11:25.116" endtime="20230207 21:11:25.119"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>@{testlist}=</arg>
+<arg>Create List</arg>
+<arg>${order_item_path}.png</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:14:27.113" level="FAIL">Keyword 'RPA.PDF.Add Files To Pdf' got multiple values for argument 'append'.</msg>
+<status status="FAIL" starttime="20230207 21:14:27.111" endtime="20230207 21:14:27.113"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>Create List</arg>
+<arg>${order_item_path}.png</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:14:42.892" level="FAIL">Keyword 'RPA.PDF.Add Files To Pdf' got multiple values for argument 'append'.</msg>
+<status status="FAIL" starttime="20230207 21:14:42.891" endtime="20230207 21:14:42.892"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${OUTPUT_DIR}${/}${/}${order_item}[Order number].png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:38:59.736" level="FAIL">Variable '${order_item}' not found. Did you mean:
+    ${order_item_path}</msg>
+<status status="FAIL" starttime="20230207 21:38:59.692" endtime="20230207 21:38:59.736"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${OUTPUT_DIR}${/}${/}1.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:39:17.017" level="FAIL">ValueError: Argument 'files' got value '[c:\Users\davfre\OneDrive - Knowit AB\Documents\Robocorp\Cert2\\1.png']' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:39:17.007" endtime="20230207 21:39:17.019"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${OUTPUT_DIR}${/}${/}1.png]</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:39:26.402" level="FAIL">ValueError: Argument 'files' got value '[c:\Users\davfre\OneDrive - Knowit AB\Documents\Robocorp\Cert2\\1.png]' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:39:26.400" endtime="20230207 21:39:26.403"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>['${OUTPUT_DIR}${/}${/}1.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:39:34.820" level="FAIL">ValueError: Argument 'files' got value '['c:\Users\davfre\OneDrive - Knowit AB\Documents\Robocorp\Cert2\\1.png']' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:39:34.820" endtime="20230207 21:39:34.820"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${OUTPUT_DIR}${/}${/}'1.png']</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:39:42.194" level="FAIL">ValueError: Argument 'files' got value '[c:\Users\davfre\OneDrive - Knowit AB\Documents\Robocorp\Cert2\\'1.png']' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:39:42.191" endtime="20230207 21:39:42.195"/>
+</kw>
+<kw name="Add Files To Pdf" library="RPA.PDF">
+<arg>[${OUTPUT_DIR}${/}${/}1.png]</arg>
+<arg>${order_item_path}.pdf</arg>
+<arg>append=True</arg>
+<doc>Add images and/or pdfs to new PDF document</doc>
+<msg timestamp="20230207 21:39:46.843" level="FAIL">ValueError: Argument 'files' got value '[c:\Users\davfre\OneDrive - Knowit AB\Documents\Robocorp\Cert2\\1.png]' that cannot be converted to list or None.</msg>
+<status status="FAIL" starttime="20230207 21:39:46.840" endtime="20230207 21:39:46.844"/>
+</kw>
+<status status="PASS" starttime="20230207 20:36:51.348" endtime="20230207 22:29:00.823"/>
+</kw>
+<status status="PASS" starttime="20230207 20:36:51.348" endtime="20230207 22:29:00.848"/>
+</test>
+<status status="PASS" starttime="20230207 20:36:51.294" endtime="20230207 22:29:00.931"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
