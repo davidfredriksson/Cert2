@@ -43,7 +43,7 @@ Process orders
     ${orders}=    Read table from CSV    orders.csv    header=True
 
     FOR    ${order_item}    IN    @{orders}
-        Wait Until Keyword Succeeds    3x    0.2 sec    Process orderitem    ${order_item}    ${order_url}
+        Wait Until Keyword Succeeds    5x    0.2 sec    Process orderitem    ${order_item}    ${order_url}
     END
 
 Process orderitem
